@@ -32,37 +32,24 @@ export function Home() {
    }, [user])
 
    return (
-      <div className="container">
-         <motion.button
+      <motion.div className="container"
+         initial={{
+            opacity: 0
+         }}
+         animate={{
+            opacity: 1
+         }}>
+         <button
             onClick={logout}
-            className="btn btn-logout btn-delete"
-            initial={{
-               opacity: 0
-            }}
-            animate={{
-               opacity: 1
-            }}>
+            className="btn btn-logout btn-delete">
             Cerrar sesión
-         </motion.button>
-         <motion.main
-            className="container-app app-todo"
-            initial={{
-               opacity: 0
-            }}
-            animate={{
-               opacity: 1
-            }}>
-            <motion.h1
-               className="app__title"
-               initial={{
-                  opacity: 0
-               }}
-               animate={{
-                  opacity: 1,
-                  transition: { delay: .1 }
-               }}>
+         </button>
+         <main
+            className="container-app app-todo">
+            <h1
+               className="app__title">
                TO DO
-            </motion.h1>
+            </h1>
             <FormTask
                className="home-form"
                error={error}
@@ -75,12 +62,12 @@ export function Home() {
                   </button>
                </div>
             </FormTask>
-         </motion.main>
+         </main>
          <section className="container-tasks">
             {
                tasks && <Tasks tasks={tasks} />
             }
          </section>
-      </div>
+      </motion.div>
    )
 }

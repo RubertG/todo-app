@@ -26,11 +26,15 @@ export function useFormTask({ id, title, description }) {
       e.preventDefault()
       if (validationErrors()) {
          const auxTask = { ...task, dateCreate: new Date().getTime() }
-         setTask(auxTask)
-         e.target.title.value = ""
-         e.target.description.value = ""
+         resetForm(e.target)
          await addDoc(collection(db, "tasks"), auxTask)
       }
+   }
+
+   const resetForm = (form) => {
+      setTask({ title: "", description: "", uid: user.uid })
+      form.title.value = ""
+      form.description.value = ""
    }
 
    const handleEdit = () => {

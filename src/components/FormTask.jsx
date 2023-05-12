@@ -4,18 +4,9 @@ import { AnimatePresence, motion } from "framer-motion"
 export function FormTask({ children, handleSubmit, task, handleChange, error, className = "" }) {
    return (
       <form onSubmit={(e) => handleSubmit(e)} className={"app__form " + className}>
-         <motion.label
+         <label
             htmlFor="title"
-            className="app__input task-input"
-            initial={{
-               y: -10,
-               opacity: 0
-            }}
-            animate={{
-               y: 0,
-               opacity: 1,
-               transition: { delay: .2 }
-            }}>
+            className="app__input task-input">
             <p className="input__text">Título</p>
             <input
                type="text"
@@ -43,19 +34,10 @@ export function FormTask({ children, handleSubmit, task, handleChange, error, cl
                   </motion.p>
                )}
             </AnimatePresence>
-         </motion.label>
-         <motion.label
+         </label>
+         <label
             htmlFor="description"
-            className="app__textarea task-input"
-            initial={{
-               y: -10,
-               opacity: 0
-            }}
-            animate={{
-               y: 0,
-               opacity: 1,
-               transition: { delay: .3 }
-            }}>
+            className="app__textarea task-input">
             <p className="input__text">Descripción</p>
             <textarea
                type="text"
@@ -83,19 +65,8 @@ export function FormTask({ children, handleSubmit, task, handleChange, error, cl
                   </motion.p>
                )}
             </AnimatePresence>
-         </motion.label>
-         <motion.div
-            initial={{
-               y: -10,
-               opacity: 0
-            }}
-            animate={{
-               y: 0,
-               opacity: 1,
-               transition: { delay: .4 }
-            }}>
-            {children}
-         </motion.div>
+         </label>
+         {children}
       </form >
    )
 }
