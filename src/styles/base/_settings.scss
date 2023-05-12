@@ -1,0 +1,25 @@
+// font family
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+// variables 
+:root {
+   --bg-principal: #FFFF;
+   --bg-secondary: #e8f0fea6;
+   --text-principal: #000000;
+   --text-secondary: #7827aa;
+   --text-hover: #FFFF;
+   --danger: #ff2a2a;
+   --text-light: #000000e1;
+   --text-alternative: #FFFF;
+}
+
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   // font-family: 'Karla', sans-serif;
+   // font-family: 'Quicksand', sans-serif;
+   font-family: 'Raleway', sans-serif;
+}

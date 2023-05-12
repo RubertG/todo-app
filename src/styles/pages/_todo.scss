@@ -1,0 +1,30 @@
+.btn-logout {
+   position: absolute;
+   top: 25px;
+   right: 15px;
+}
+
+.app-todo {
+   margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+   .btn-logout {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+   }
+
+   .home-form {
+      .app__input,
+      .app__textarea {
+         width: 500px;
+      }
+   }
+}
+
+@media (min-width: 1024px) {
+   .app-todo {
+      margin-top: 0px;
+   }
+}

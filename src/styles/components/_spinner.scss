@@ -1,0 +1,45 @@
+.spinner {
+   width: 25px;
+   height: 25px;
+   border: 3px solid #cc00ff;
+   border-bottom-color: var(--bg-secondary);
+   border-left-color: var(--bg-secondary);
+   border-right-color: var(--bg-secondary);
+   border-radius: 100%;
+   animation: rotation 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+   opacity: 0;
+   transition: opacity .2s;
+}
+
+.spinner-general {
+   border-bottom-color: #00000015;
+   border-left-color: #00000015;
+   border-right-color: #00000015;
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   top: 50%;
+   right: 50%;
+   transform: translate(50%, -50%);
+}
+
+.spinner-button {
+   position: absolute;
+   top: 50%;
+   right: 50%;
+   transform: translate(50%, -50%);
+}
+
+.active {
+   opacity: 1;
+}
+
+@keyframes rotation {
+   0% {
+      transform: translate(50%, -50%) rotate(0deg);
+   }
+
+   100% {
+      transform: translate(50%, -50%) rotate(360deg);
+   }
+}

@@ -1,0 +1,14 @@
+.popup {
+   position: fixed;
+   background-color: #ffffff50;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 0 10px;
+   backdrop-filter: blur(2px);
+   z-index: 100000;
+
+   .task__description {
+      text-align: center;
+   }
+}

@@ -1,0 +1,21 @@
+.task-input {
+   margin-bottom: 15px !important;
+   position: relative;
+}
+
+.form__error{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   color: var(--danger);
+   font-weight: 700;
+   padding: 0 5px;
+   border-radius: 5px;
+   font-size: 1.2rem;
+   transform: translateY(100%);
+}
+
+textarea+.form__error {
+   transform: translateY(80%);
+}
