@@ -179,6 +179,10 @@ body {
    .btn-delete:hover {
       background-color: var(--danger);
    }
+
+   .btn-success:hover {
+      background-color: var(--success);
+   }
 }
 
 @media (min-width: 768px){

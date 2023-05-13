@@ -21,7 +21,7 @@ export function Task({ id, title, description }) {
                <button onClick={handlePopupDelete} className="btn btn-small btn-delete">
                   Eliminar
                </button>
-               <button onClick={handleEdit} className="btn btn-small">
+               <button onClick={handleEdit} className="btn btn-small btn-success">
                   Editar
                </button>
             </div>

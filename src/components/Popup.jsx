@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export function Popup({ children, funcCancel, action, actionText, isDelete = false }) {
 
-   const classNameButton = isDelete ? "btn-delete" : ""
+   const classNameButton = isDelete ? "btn-delete" : "btn-success"
 
    return (
       <motion.div

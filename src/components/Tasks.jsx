@@ -4,6 +4,25 @@ import { AnimatePresence, motion } from "framer-motion"
 
 export function Tasks({ tasks }) {
 
+   if (window.innerWidth < 768) return (
+      <ul
+         className="tasks">
+         <AnimatePresence>
+            {
+               tasks.map(({ id, title, description }) => {
+                  return (
+                     <li
+                        className="container-app task"
+                        key={id}>
+                        <Task id={id} title={title} description={description} />
+                     </li>
+                  )
+               })
+            }
+         </AnimatePresence>
+      </ul>
+   )
+
    return (
       <motion.ul
          className="tasks"
@@ -29,7 +48,6 @@ export function Tasks({ tasks }) {
                            opacity: 0,
                            transition: { duration: .2 }
                         }}
-                        layout
                         layoutId={id}>
                         <Task id={id} title={title} description={description} />
                      </motion.li>
